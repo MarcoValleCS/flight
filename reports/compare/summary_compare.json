@@ -1,0 +1,116 @@
+{
+  "n_windows": 3871,
+  "horizons_s": [
+    30,
+    60,
+    90,
+    120
+  ],
+  "counts": {
+    "flights_seen": 557,
+    "flights_used": 500,
+    "anchors_fp": 20142,
+    "anchors_kept": 3871
+  },
+  "coverage": {
+    "flightprev": 1.0,
+    "flightprev_ens": 1.0,
+    "flightbert_fb_v3": 0.9961250322913976,
+    "flightbert_flightbert_gpu": 0.9930250581245156,
+    "cv": 1.0,
+    "persist": 1.0
+  },
+  "ade_per_horizon_m": {
+    "flightprev": [
+      381.86565866187897,
+      575.3443653817409,
+      887.7425684833255,
+      1276.290227428032
+    ],
+    "flightprev_ens": [
+      376.04031135138746,
+      562.8944519860144,
+      863.8283574231759,
+      1241.3995604468107
+    ],
+    "flightbert_fb_v3": [
+      12455.048985363896,
+      10765.113289626794,
+      10655.50083217138,
+      10523.590837579159
+    ],
+    "flightbert_flightbert_gpu": [
+      2344.880473948519,
+      3360.6483403838356,
+      5366.6156148206765,
+      7350.769107368285
+    ],
+    "cv": [
+      491.56850760980365,
+      734.637683572647,
+      1127.4300597304755,
+      1612.7213578235535
+    ],
+    "persist": [
+      4949.032006581375,
+      9864.088609527038,
+      14739.730129402911,
+      19607.216844469545
+    ]
+  },
+  "fde120_m": {
+    "flightprev": 1276.290227428032,
+    "flightprev_ens": 1241.3995604468107,
+    "flightbert_fb_v3": 10523.590837579159,
+    "flightbert_flightbert_gpu": 7350.769107368285,
+    "cv": 1612.7213578235535,
+    "persist": 19607.216844469545
+  },
+  "mae_alt_m": {
+    "flightprev": 210.74279171467177,
+    "flightprev_ens": 209.78573826683487,
+    "flightbert_fb_v3": 287.3758335706515,
+    "flightbert_flightbert_gpu": 91.4497393758723,
+    "cv": 65.64881245437287,
+    "persist": 197.2617078247616
+  },
+  "fb_info": {
+    "fb_v3": {
+      "name": "fb_v3",
+      "period": 30,
+      "k": 9,
+      "n": 15,
+      "direct": true,
+      "bits": {
+        "lon": 18,
+        "lat": 19,
+        "alt": 11,
+        "vx": 12,
+        "vy": 12,
+        "vz": 11
+      },
+      "epoch": 21
+    },
+    "flightbert_gpu": {
+      "name": "flightbert_gpu",
+      "period": 20,
+      "k": 9,
+      "n": 15,
+      "direct": false,
+      "bits": {
+        "lon": 18,
+        "lat": 16,
+        "alt": 11,
+        "vx": 12,
+        "vy": 12,
+        "vz": 11
+      },
+      "epoch": 22
+    }
+  },
+  "fp_checkpoints": [
+    "runs/transformer_v1/best.pt",
+    "runs/transformer_v2/best.pt"
+  ],
+  "total_seconds": 27.202336072921753
+}

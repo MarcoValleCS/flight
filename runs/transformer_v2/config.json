@@ -1,0 +1,93 @@
+{
+  "data": {
+    "step_s": 5,
+    "history_s": 60,
+    "horizons_s": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120
+    ],
+    "seg_gap_s": 60,
+    "seg_max_speed_ms": 450.0,
+    "seg_jump_m": 2000.0,
+    "target_smooth": 3,
+    "valid_gap_s": 15.0,
+    "smooth_k": 3,
+    "min_segment_s": 200,
+    "stride_s": 60,
+    "max_per_flight": 40,
+    "caps": {
+      "train": 700000,
+      "val": 120000,
+      "test": 120000
+    },
+    "min_count": {
+      "ac_type": 20,
+      "operator": 20,
+      "dep": 10,
+      "arr": 10
+    },
+    "bbox": [
+      38.5,
+      52.5,
+      1.5,
+      16.5
+    ],
+    "alt_range_ft": [
+      -600.0,
+      60000.0
+    ],
+    "gs_range_kt": [
+      0.0,
+      800.0
+    ]
+  },
+  "scales": {
+    "xy": 10000.0,
+    "z": 1000.0,
+    "z0": 12000.0,
+    "gs": 250.0,
+    "vr": 25.0
+  },
+  "model": {
+    "arch": "transformer",
+    "d_model": 384,
+    "n_layers": 6,
+    "n_heads": 12,
+    "ff": 1024,
+    "dropout": 0.1,
+    "emb": {
+      "ac_type": 16,
+      "operator": 12,
+      "dep": 8,
+      "arr": 8
+    },
+    "predict_logvar": false
+  },
+  "train": {
+    "batch_size": 1024,
+    "epochs": 50,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "warmup_steps": 500,
+    "w_xy": 1.0,
+    "w_z": 0.3,
+    "w_phase": 0.1,
+    "huber_delta": 0.1,
+    "grad_clip": 1.0,
+    "patience": 12,
+    "num_workers": 4,
+    "seed": 42,
+    "amp": true,
+    "phase_threshold_ms": 1.5
+  }
+}

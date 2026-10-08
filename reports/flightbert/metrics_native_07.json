@@ -1,0 +1,78 @@
+{
+  "model": "FlightBERT fb_v3 (Binary Encoding, direct)",
+  "checkpoint": "FlightBert++/runs/fb_v3/best.pt",
+  "test_csv": "Italy_24-04-07.csv (ultimo 15% del giorno, split temporale interno)",
+  "period_s": 30,
+  "k": 9,
+  "n": 15,
+  "horizons_steps": [
+    1,
+    3,
+    9,
+    15
+  ],
+  "horizons_s": {
+    "1": 30,
+    "3": 90,
+    "9": 270,
+    "15": 450
+  },
+  "metrics": {
+    "1": {
+      "mae_lon_deg": 0.0697,
+      "rmse_lon_deg": 0.2644,
+      "mae_lat_deg": 0.0459,
+      "rmse_lat_deg": 0.1849,
+      "mae_alt_m": 296.9434,
+      "rmse_alt_m": 649.793,
+      "mae_vx_kmh": 69.3507,
+      "mae_vy_kmh": 69.0633,
+      "mae_vz_kmh": 5.6733,
+      "hdist_mean_km": 8.793,
+      "hdist_p90_km": 16.69,
+      "persist_hdist_km": 4.718
+    },
+    "3": {
+      "mae_lon_deg": 0.0671,
+      "rmse_lon_deg": 0.2556,
+      "mae_lat_deg": 0.0421,
+      "rmse_lat_deg": 0.1646,
+      "mae_alt_m": 292.7066,
+      "rmse_alt_m": 626.6905,
+      "mae_vx_kmh": 70.607,
+      "mae_vy_kmh": 69.6755,
+      "mae_vz_kmh": 5.6332,
+      "hdist_mean_km": 8.233,
+      "hdist_p90_km": 16.084,
+      "persist_hdist_km": 14.028
+    },
+    "9": {
+      "mae_lon_deg": 0.0698,
+      "rmse_lon_deg": 0.2458,
+      "mae_lat_deg": 0.0444,
+      "rmse_lat_deg": 0.1714,
+      "mae_alt_m": 312.0421,
+      "rmse_alt_m": 662.7597,
+      "mae_vx_kmh": 72.5882,
+      "mae_vy_kmh": 71.4173,
+      "mae_vz_kmh": 5.6997,
+      "hdist_mean_km": 8.596,
+      "hdist_p90_km": 17.268,
+      "persist_hdist_km": 41.424
+    },
+    "15": {
+      "mae_lon_deg": 0.1177,
+      "rmse_lon_deg": 0.3513,
+      "mae_lat_deg": 0.0766,
+      "rmse_lat_deg": 0.2507,
+      "mae_alt_m": 438.99,
+      "rmse_alt_m": 901.4837,
+      "mae_vx_kmh": 88.6634,
+      "mae_vy_kmh": 86.7758,
+      "mae_vz_kmh": 5.9629,
+      "hdist_mean_km": 14.616,
+      "hdist_p90_km": 31.016,
+      "persist_hdist_km": 68.034
+    }
+  }
+}

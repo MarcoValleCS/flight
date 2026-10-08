@@ -1,0 +1,27 @@
+# --- file grandi: esclusi (limite GitHub 100 MB/file) ---
+# dati grezzi ADS-B (~6 GB totali)
+*.csv
+# ...ma i CSV dei report (metriche, pochi KB) si includono
+!reports/**/*.csv
+*.ods
+# ...ma i file di esempio FlightBERT (piccoli) si includono
+!FlightBert++/*.ods
+# dataset processato (~360 MB, rigenerabile con python -m src.build_dataset)
+data/
+# checkpoint FlightBERT (4 x ~435 MB: pesi, non la configurazione)
+FlightBert++/runs/**/*.pt
+# log di build/training locali (opzionali, ma tenuti se piccoli)
+build_*.log
+train_*.log
+compare_full*.log
+eval_v2.log
+fb_native_test.log
+# --- python ---
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+# --- artefatti locali di prova ---
+data/smoke/
+runs/smoke/
+reports/smoke/

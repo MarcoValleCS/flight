@@ -1,0 +1,4 @@
+cd "C:\Users\marco\Downloads\FlightBert++"
+py -m pip install torch pandas numpy
+
+py .\flightbert.py --csv .\Italy_24-04-03.csv --epochs 20
