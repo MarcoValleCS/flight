@@ -1,0 +1,4 @@
+# Artefatti generati dalle run di training (report HTML, metriche, checkpoint).
+# Non sono codice sorgente del progetto: esclusi dal conteggio dei linguaggi.
+runs/** linguist-generated=true
+FlightBert++/runs/** linguist-generated=true
